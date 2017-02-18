@@ -3,6 +3,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 
 import unittest
 
+
 def is_alert_present(wd):
     try:
         wd.switch_to_alert().text
@@ -10,23 +11,30 @@ def is_alert_present(wd):
     except:
         return False
 
+
 class test_add_contact(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
     
-    def test_test_add_contact(self):
-        success = True
+    def test_add_contact(self):
         wd = self.wd
-        wd.get("http://localhost:8080/addressbook/")
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+        self.open_main_page(wd)
+        self.login(wd)
+        self.create_new_contact(wd)
+        self.return_home_page(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
+        wd.find_element_by_link_text("Wyloguj się").click()
+
+    def return_home_page(self, wd):
+        wd.find_element_by_link_text("home page").click()
+
+    def create_new_contact(self, wd):
+        # init contact creation
         wd.find_element_by_link_text("nowy wpis").click()
+        # fill name info
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Adam")
@@ -42,6 +50,7 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("nickname").click()
         wd.find_element_by_name("nickname").clear()
         wd.find_element_by_name("nickname").send_keys("dsksljd")
+        # fill company info
         wd.find_element_by_name("title").click()
         wd.find_element_by_name("title").clear()
         wd.find_element_by_name("title").send_keys("dfdsf")
@@ -51,6 +60,7 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
         wd.find_element_by_name("address").send_keys("dfdsfds")
+        # fill  contact (phone, mail, website) info
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
         wd.find_element_by_name("home").send_keys("3232132131")
@@ -75,6 +85,7 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("homepage").click()
         wd.find_element_by_name("homepage").clear()
         wd.find_element_by_name("homepage").send_keys("www.ff.com")
+        # fill birthday date info
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[31]").is_selected():
             wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[31]").click()
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[12]").is_selected():
@@ -82,6 +93,7 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys("1987")
+        # fill anniversary date info
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[31]").is_selected():
             wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[31]").click()
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[11]").is_selected():
@@ -89,6 +101,7 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
         wd.find_element_by_name("ayear").send_keys("1996")
+        # fill second address info
         wd.find_element_by_name("address2").click()
         wd.find_element_by_name("address2").clear()
         wd.find_element_by_name("address2").send_keys("fgrfgfg")
@@ -98,11 +111,21 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys("fgdgfdgfdgd")
+        # submit new contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-        wd.find_element_by_link_text("home page").click()
-        wd.find_element_by_link_text("Wyloguj się").click()
-        self.assertTrue(success)
-    
+
+    def login(self, wd):
+        wd.find_element_by_name("user").click()
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("pass").click()
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+
+    def open_main_page(self, wd):
+        wd.get("http://localhost:8080/addressbook/")
+
     def tearDown(self):
         self.wd.quit()
 
