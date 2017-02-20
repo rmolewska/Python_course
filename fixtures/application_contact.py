@@ -1,4 +1,5 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
+from fixtures.session import SessionHelper
 
 
 class ApplicationContact:
@@ -6,10 +7,7 @@ class ApplicationContact:
     def __init__(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
-
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Wyloguj się").click()
+        self.session = SessionHelper(self)
 
     def return_home_page(self):
         wd = self.wd
@@ -96,17 +94,6 @@ class ApplicationContact:
         # submit new contact
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_home_page()
-
-    def login(self, username, password):
-        wd = self.wd
-        self.open_main_page()
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def open_main_page(self):
         wd = self.wd
