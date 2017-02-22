@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a166b369-58c4-40eb-86a2-d6f1a22e2cdf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtures/contact.py" afterPath="$PROJECT_DIR$/fixtures/contact.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtures/group.py" afterPath="$PROJECT_DIR$/fixtures/group.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="group.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixtures/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
+            <state relative-caret-position="219">
               <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding />
             </state>
@@ -63,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixtures/contact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
@@ -126,9 +124,9 @@
         <option value="$PROJECT_DIR$/tests/test_add_contact.py" />
         <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$USER_HOME$/Desktop/delcontact.py" />
-        <option value="$PROJECT_DIR$/fixtures/group.py" />
         <option value="$PROJECT_DIR$/tests/test_del_contact.py" />
         <option value="$PROJECT_DIR$/fixtures/contact.py" />
+        <option value="$PROJECT_DIR$/fixtures/group.py" />
       </list>
     </option>
   </component>
@@ -203,7 +201,7 @@
       <recent name="C:\Users\Renata\Documents\GitHub\Python_course\fixtures" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_del_contact.py">
+  <component name="RunManager" selected="Python tests.py.test in tests">
     <configuration default="false" name="py.test in test_add_contact.py (1)" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -460,9 +458,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_del_contact.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python.delcontact" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_del_contact.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.delcontact" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_del_group.py" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_add_contact.py (1)" />
       </list>
@@ -490,9 +488,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_del_contact_py - 2017.02.21 at 08h 56m 06s.xml">
-      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_test_del_contact_py - 2017.02.22 at 06h 24m 53s.xml">
       <configuration name="py.test in test_del_contact.py" configurationId="tests" />
     </history-entry>
@@ -504,9 +499,6 @@
     </history-entry>
     <history-entry file="py_test_in_test_del_contact_py - 2017.02.22 at 06h 29m 29s.xml">
       <configuration name="py.test in test_del_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_del_group_py - 2017.02.21 at 08h 19m 10s.xml">
-      <configuration name="py.test in test_del_group.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_del_group_py - 2017.02.21 at 08h 20m 29s.xml">
       <configuration name="py.test in test_del_group.py" configurationId="tests" />
@@ -520,17 +512,23 @@
     <history-entry file="py_test_in_tests - 2017.02.21 at 22h 31m 40s.xml">
       <configuration name="py.test in tests" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_in_tests - 2017.02.22 at 06h 33m 52s.xml">
+      <configuration name="py.test in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_tests - 2017.02.22 at 06h 36m 09s.xml">
+      <configuration name="py.test in tests" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="393" y="28" width="1599" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17330803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -857,14 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixtures/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/delcontact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -877,14 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_del_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -909,6 +891,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="83" column="28" lean-forward="true" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_del_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtures/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>
