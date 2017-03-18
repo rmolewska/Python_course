@@ -79,7 +79,7 @@ class ContactHelper:
 
     def select_contact_to_edit_by_index(self, index):
         wd = self.app.wd
-        wd.find_elements_by_xpath("//img[@title='Edytuj']")[index].click()
+        wd.find_elements_by_xpath("//img[@src='icons/pencil.png']")[index].click()
 
     def modify_first_contact(self):
         self.select_contact_to_edit_by_index(0)
