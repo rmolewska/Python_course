@@ -19,7 +19,7 @@ class Application:
         except:
             return False
 
-    def open_main_page(self):
+    def open_home_page(self):
         wd = self.wd
         wd.get("http://localhost:8080/addressbook/")
 

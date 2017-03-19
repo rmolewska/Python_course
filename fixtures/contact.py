@@ -77,18 +77,27 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
-    def select_contact_to_edit_by_index(self, index):
+    def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
-        wd.find_elements_by_xpath("//img[@src='icons/pencil.png']")[index].click()
+        self.app.open_home_page()
+        row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_tag_name("a").click()
+
+    def open_contact_view_by_index(self, index):
+        wd = self.app.wd
+        self.app.open_home_page()
+        row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name("td")[6]
+        cell.find_element_by_tag_name("a").click()
 
     def modify_first_contact(self):
-        self.select_contact_to_edit_by_index(0)
+        self.open_contact_to_edit_by_index(0)
 
     def modify_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
-        self.open_home_page()
         # open modification form
-        self.select_contact_to_edit_by_index(index)
+        self.open_contact_to_edit_by_index(index)
         self.fill_contact_form(new_contact_data)
         # submit modification
         wd.find_element_by_name("update").click()
@@ -114,10 +123,10 @@ class ContactHelper:
             self.contact_cache = []
             for row in wd.find_elements_by_name("entry"):
                 cells = row.find_elements_by_tag_name("td")
-                firstname = cells[2].text
-                lastname = cells[1].text
+                first_name = cells[2].text
+                last_name = cells[1].text
                 id = cells[0].find_element_by_tag_name("input").get_attribute("value")
-                self.contact_cache.append(Contact(last_name=lastname, first_name=firstname, id=id))
+                self.contact_cache.append(Contact(last_name=last_name, first_name=first_name, id=id))
         return list(self.contact_cache)
 
 
