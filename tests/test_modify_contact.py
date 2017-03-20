@@ -10,7 +10,7 @@ def test_modify_some_contact_(app):
                                        home_phone="3232132131", mobile_phone="12313213232", work_phone="2132132133",
                                        fax="213123213213", email="hshs@qwe.com", email_2="ewqe@qwe.com",
                                        email_3="dqweweq@qwe.com", homepage="www.ff.com", birth_year="1986",
-                                       ann_year="1996", address_2="fgrfgfg", phone_2="453543543543", notes="fgdgfdgd"))
+                                       ann_year="1996", address_2="fgrfgfg", phone2="453543543543", notes="fgdgfdgd"))
     old_contacts = app.contact.get_contact_list()
     index = randrange(len(old_contacts))
     contact = Contact(first_name="New first name", last_name="New")
