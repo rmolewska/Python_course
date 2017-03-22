@@ -34,7 +34,7 @@ class ContactHelper:
         # fill company info
         self.change_contact_field_value("title", contact.company_title)
         self.change_contact_field_value("company", contact.company_name)
-        self.change_contact_field_value("address", contact.company_address)
+        self.change_contact_field_value("address", contact.address)
         # fill  contact (phone, mail, website) info
         self.change_contact_field_value("home", contact.home_phone)
         self.change_contact_field_value("mobile", contact.mobile_phone)
